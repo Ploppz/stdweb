@@ -5,10 +5,15 @@ use webcore::try_from::TryInto;
 use webcore::instance_of::InstanceOf;
 use webapi::array_buffer::ArrayBuffer;
 
+/// TODO
 pub trait ArrayKind: Sized {
+    /// TODO
     fn is_typed_array( reference: &Reference ) -> bool;
+    /// TODO
     fn into_typed_array( slice: &[Self] ) -> TypedArray< Self >;
+    /// TODO
     fn into_typed_array_from_array_buffer( buffer: &ArrayBuffer ) -> TypedArray< Self >;
+    /// TODO
     fn from_typed_array( array: &TypedArray< Self > ) -> Vec< Self >;
 }
 
